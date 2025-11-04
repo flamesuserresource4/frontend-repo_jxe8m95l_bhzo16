@@ -3,72 +3,71 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <section id="home" className="relative pt-24 sm:pt-28">
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-50 to-transparent pointer-events-none" />
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1505691723518-36a5ac3b2d95?q=80&w=1600&auto=format&fit=crop"
+          alt="Residenze moderne a Brugherio"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-white/0" />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1"
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
-              Verdi 8
-              <span className="block text-emerald-700">Bellezza, efficienza, comfort</span>
-            </h1>
-            <p className="mt-6 text-lg text-gray-700 max-w-xl">
-              Un nuovo intervento residenziale nel cuore di Brugherio: 5 unità abitative moderne ed efficienti, progettate per vivere bene ogni giorno.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#unita"
-                className="px-5 py-3 rounded-md bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition"
-              >
-                Scopri le unità
-              </a>
-              <a
-                href="#vicinanze"
-                className="px-5 py-3 rounded-md bg-white text-emerald-700 font-semibold border border-emerald-200 hover:border-emerald-400 hover:bg-emerald-50 transition"
-              >
-                La zona di Brugherio
-              </a>
-            </div>
-          </motion.div>
+      <div className="relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-10 items-end">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="col-span-12 lg:col-span-7"
+            >
+              <span className="inline-block text-xs tracking-widest uppercase font-semibold text-emerald-200/90 bg-emerald-900/30 backdrop-blur px-3 py-1 rounded-full">Brugherio</span>
+              <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+                Verdi 8
+                <span className="block text-emerald-200">Abitare bene, oggi</span>
+              </h1>
+              <p className="mt-6 text-lg text-white/90 max-w-xl">
+                5 unità dal design contemporaneo, efficienti e luminose. Spazi pensati per la vita reale, nel cuore di una città con tutto a portata di mano.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href="#unita"
+                  className="px-5 py-3 rounded-md bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition shadow-lg shadow-emerald-500/20"
+                >
+                  Scopri le unità
+                </a>
+                <a
+                  href="#vicinanze"
+                  className="px-5 py-3 rounded-md bg-white/10 text-white font-semibold border border-white/20 hover:bg-white/20 transition backdrop-blur"
+                >
+                  La zona di Brugherio
+                </a>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-4 text-white/80 text-sm">
+                <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-emerald-400"/> Classe energetica A4</span>
+                <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-emerald-400"/> Finiture ricercate</span>
+                <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-emerald-400"/> Comfort acustico</span>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
-            className="relative order-1 lg:order-2"
-          >
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-emerald-100 via-white to-emerald-50 p-4 shadow-[0_20px_80px_-20px_rgba(16,185,129,0.4)]">
-              <div className="h-full w-full rounded-xl bg-white grid place-items-center overflow-hidden">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,0.15),transparent_40%),_radial-gradient(circle_at_70%_80%,rgba(16,185,129,0.15),transparent_40%)]" />
-                  <motion.div
-                    className="absolute inset-6 rounded-xl bg-emerald-600/10 border border-emerald-200"
-                    animate={{ rotate: [0, 2, -2, 0] }}
-                    transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
-                  />
-                  <motion.div
-                    className="absolute inset-10 rounded-xl bg-emerald-600/10 border border-emerald-200"
-                    animate={{ rotate: [0, -3, 3, 0] }}
-                    transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-sm uppercase tracking-widest text-emerald-700/80 font-semibold">Vista concettuale</p>
-                      <p className="mt-2 text-2xl sm:text-3xl font-bold text-gray-900">Complesso Verdi 8</p>
-                      <p className="mt-2 text-gray-600 max-w-xs mx-auto">
-                        Interazione 3D e animazioni leggere per un impatto moderno.
-                      </p>
-                    </div>
-                  </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="col-span-12 lg:col-span-5"
+            >
+              <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/60 backdrop-blur shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
+                  alt="Interni eleganti e luminosi"
+                  className="w-full h-[320px] object-cover"
+                />
+                <div className="p-6">
+                  <p className="text-sm text-gray-700">Materiali di qualità, luce naturale e impianti ad alta efficienza per un benessere quotidiano.</p>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
